@@ -1,0 +1,107 @@
+/* Your app styles here */
+.ios .tabbar-labels .tab-link:not(.tab-link-active) .icon-ios-fill {
+  display: none;
+}
+.ios .tabbar-labels .tab-link.tab-link-active .icon:not(.icon-ios-fill) {
+  display: none;
+}
+/*.page-content{
+  background-color: #275F8D;
+}
+.block-strong{
+  box-shadow: 0px 0px 2px 0 rgba(0, 0, 0, 0.2);
+background-color:#F2F2F2;
+}
+
+*/
+.swipeout-decline{
+  pointer-events: none;
+  cursor: default;
+  opacity:0.2;
+}
+
+
+
+/* FUNCTION FALLEN LEAVES*/
+.fallingLeaves {
+  text-align: center;
+}
+.fallingLeaves span {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin: -280px 40px 54px -34px;
+  background:url("../resources/paper-plane.svg");
+  -webkit-animation: fallingLeaves 10s infinite linear;
+  -moz-animation: fallingLeaves 10s infinite linear;
+}
+.fallingLeaves span:nth-child(5n+5) {
+
+  -webkit-animation-delay: 1.3s;
+  -moz-animation-delay: 1.3s;
+}
+.fallingLeaves span:nth-child(3n+2) {
+
+  -webkit-animation-delay: 1.5s;
+  -moz-animation-delay: 1.5s;
+}
+.fallingLeaves span:nth-child(2n+5) {
+
+  -webkit-animation-delay: 1.7s;
+  -moz-animation-delay: 1.7s;
+}
+
+.fallingLeaves span:nth-child(3n+10) {
+
+  -webkit-animation-delay: 2.7s;
+  -moz-animation-delay: 2.7s;
+}
+.fallingLeaves span:nth-child(7n+2) {
+
+  -webkit-animation-delay: 3.5s;
+  -moz-animation-delay: 3.5s;
+}
+.fallingLeaves span:nth-child(4n+5) {
+
+  -webkit-animation-delay: 5.5s;
+  -moz-animation-delay: 5.5s;
+}
+.fallingLeaves span:nth-child(3n+7) {
+
+  -webkit-animation-delay: 8s;
+  -moz-animation-delay: 8s;
+}
+@-webkit-keyframes fallingLeaves {
+  0% {
+    opacity: 1;
+
+    -webkit-transform: translate(0, 0px) rotateZ(0deg);
+  }
+  75% {
+    opacity: 0.3;
+
+    -webkit-transform: translate(100px, 600px) rotateZ(270deg);
+  }
+  100% {
+    opacity: 0;
+
+    -webkit-transform: translate(150px, 800px) rotateZ(360deg);
+  }
+}
+@-moz-keyframes fallingLeaves {
+  0% {
+    opacity: 1;
+
+    -webkit-transform: translate(0, 0px) rotateZ(0deg);
+  }
+  75% {
+    opacity: 1;
+
+    -webkit-transform: translate(100px, 600px) rotateZ(270deg);
+  }
+  100% {
+    opacity: 0;
+
+    -webkit-transform: translate(150px, 800px) rotateZ(360deg);
+  }
+}
