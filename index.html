@@ -11,8 +11,10 @@
       * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
           * Enable inline JS: add 'unsafe-inline' to default-src
   -->
-  <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <meta name="theme-color" content="#2196f3">
@@ -28,126 +30,125 @@
   <script src="http://vjs.zencdn.net/ie8/ie8-version/videojs-ie8.min.js"></script>
 </head>
 <body>
-  <div id="app">
-    <!-- Status bar overlay for fullscreen mode-->
-    <div class="statusbar"></div>
+<div id="app">
+  <!-- Status bar overlay for fullscreen mode-->
+  <div class="statusbar"></div>
 
-    <!-- Views/Tabs container -->
-    <div class="views tabs ios-edges">
-      <!-- Tabbar for switching views-tabs -->
-      <div class="toolbar tabbar-labels toolbar-bottom-md">
-        <div class="toolbar-inner">
-          <a href="#view-home" class="tab-link tab-link-active">
-            <i class="icon f7-icons ios-only">home</i>
-            <i class="icon f7-icons ios-only icon-ios-fill">home_fill</i>
-            <i class="icon material-icons md-only">home</i>
-            <span class="tabbar-label">Home</span>
-          </a>
-          <a href="#view-catalog" class="tab-link">
-            <i class="icon f7-icons ios-only">calendar</i>
-            <i class="icon f7-icons ios-only icon-ios-fill">calendr_fill</i>
-            <i class="icon material-icons md-only">insert_invitation</i>
-            <span class="tabbar-label">Kalender</span>
-          </a>
-          <a href="#view-settings" class="tab-link">
-            <i class="icon f7-icons ios-only">settings</i>
-            <i class="icon f7-icons ios-only icon-ios-fill">settings_fill</i>
-            <i class="icon material-icons md-only">settings</i>
-            <span class="tabbar-label">Info</span>
-          </a>
-        </div>
+  <!-- Views/Tabs container -->
+  <div class="views tabs ios-edges">
+    <!-- Tabbar for switching views-tabs -->
+    <div class="toolbar tabbar-labels toolbar-bottom-md">
+      <div class="toolbar-inner">
+        <a href="#view-home" class="tab-link tab-link-active">
+          <i class="icon f7-icons ios-only">home</i>
+          <i class="icon f7-icons ios-only icon-ios-fill">home_fill</i>
+          <i class="icon material-icons md-only">home</i>
+          <span class="tabbar-label">Home</span>
+        </a>
+        <a href="#view-catalog" class="tab-link">
+          <i class="icon f7-icons ios-only">calendar</i>
+          <i class="icon f7-icons ios-only icon-ios-fill">calendar_fill</i>
+          <i class="icon material-icons md-only">insert_invitation</i>
+          <span class="tabbar-label">Kalender</span>
+        </a>
+        <a href="#view-settings" class="tab-link">
+          <i class="icon f7-icons ios-only">settings</i>
+          <i class="icon f7-icons ios-only icon-ios-fill">settings_fill</i>
+          <i class="icon material-icons md-only">settings</i>
+          <span class="tabbar-label">Info</span>
+        </a>
       </div>
-      <!-- Your main view/tab, should have "view-main" class. It also has "tab-active" class -->
-      <div id="view-home" class="view view-main tab tab-active">
-        <!-- Page, data-name contains page name which can be used in page callbacks -->
-        <div class="page" data-name="home">
-          <!-- Top Navbar -->
-          <div class="navbar">
-            <div class="navbar-inner">
+    </div>
+    <!-- Your main view/tab, should have "view-main" class. It also has "tab-active" class -->
+    <div id="view-home" class="view view-main tab tab-active">
+      <!-- Page, data-name contains page name which can be used in page callbacks -->
+      <div class="page" data-name="home">
+        <!-- Top Navbar -->
+        <div class="navbar">
+          <div class="navbar-inner">
 
             <div class="title sliding">RehabiliTUM</div>
 
-            </div>
-          </div>
-
-          <!-- Scrollable page content-->
-
-          <div class="page-content">
-
-            <div class="block block-strong">
-               <div align="center" class="block-header">Hüftbeuger</div>
-              <video id="my-video" class="video-js" controls preload="auto" width="100%" height="100%"
-                     data-setup="{}">
-                <source src="resources/Übung_2.mp4" type='video/mp4'>
-                <!-- <source src="MY_VIDEO.webm" type='video/webm'>-->
-                <p class="vjs-no-js">
-                  To view this video please enable JavaScript, and consider upgrading to a web browser that
-                  <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-                </p>
-              </video>
-              <div class="block-footer">
-                <button class="col button button-fill color-blue" onclick="completeTask()" >Übung abschließen</button>
-              </div>
-            </div>
-            <div class="block block-strong">
-               <div align="center" class="block-header">Oberschenkelaußenseite</div>
-              <video id="my-video" class="video-js" controls preload="auto" width="100%" height="100%"
-                     data-setup="{}">
-                <source src="resources/Übung_2_2.mp4" type='video/mp4'>
-                <!-- <source src="MY_VIDEO.webm" type='video/webm'>-->
-                <p class="vjs-no-js">
-                  To view this video please enable JavaScript, and consider upgrading to a web browser that
-                  <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-                </p>
-              </video>
-              <div class="block-footer">
-                <button class="col button button-fill color-blue" onclick="completeTask()" >Übung abschließen</button>
-              </div>
-            </div>
-            <div class="block block-strong">
-              <div align="center" class="block-header">Aufschauender Hund</div>
-              <video id="my-video" class="video-js" controls preload="auto" width="100%" height="100%"
-                      data-setup="{}">
-                <source src="resources/Übung_3.mp4" type='video/mp4'>
-                <!-- <source src="MY_VIDEO.webm" type='video/webm'>-->
-                <p class="vjs-no-js">
-                  To view this video please enable JavaScript, and consider upgrading to a web browser that
-                  <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-                </p>
-              </video>
-              <div class="block-footer">
-                <button class="col button button-fill color-blue" onclick="completeTask()" >Übung abschließen</button>
-              </div>
-            </div>
-            <div class="block block-strong">
-              <div align="center" class="block-header">Unterer Rücken</div>
-              <video id="my-video" class="video-js" controls preload="auto" width="100%" height="100%"
-                     data-setup="{}">
-                <source src="resources/Übung_4.mp4" type='video/mp4'>
-                <!-- <source src="MY_VIDEO.webm" type='video/webm'>-->
-                <p class="vjs-no-js">
-                  To view this video please enable JavaScript, and consider upgrading to a web browser that
-                  <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-                </p>
-              </video>
-              <div class="block-footer">
-                <button class="col button button-fill color-blue" onclick="completeTask()" >Übung abschließen</button>
-              </div>
-            </div>
-
-
-
           </div>
         </div>
-      </div>
 
-      <!-- Catalog View -->
-      <div id="view-catalog" class="view tab">
-        <!-- Catalog page will be loaded here dynamically from /catalog/ route -->
+        <!-- Scrollable page content-->
+
+        <div class="page-content">
+
+          <div class="block block-strong">
+            <div align="center" class="block-header">Hüftbeuger</div>
+            <video id="my-video" class="video-js" controls preload="auto" width="100%" height="100%"
+                   data-setup="{}">
+              <source src="resources/Übung_2.mp4" type='video/mp4'>
+              <!-- <source src="MY_VIDEO.webm" type='video/webm'>-->
+              <p class="vjs-no-js">
+                To view this video please enable JavaScript, and consider upgrading to a web browser that
+                <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+              </p>
+            </video>
+            <div class="block-footer">
+              <button class="col button button-fill color-blue" onclick="completeTask()">Übung abschließen</button>
+            </div>
+          </div>
+          <div class="block block-strong">
+            <div align="center" class="block-header">Oberschenkelaußenseite</div>
+            <video id="my-video" class="video-js" controls preload="auto" width="100%" height="100%"
+                   data-setup="{}">
+              <source src="resources/Übung_2_2.mp4" type='video/mp4'>
+              <!-- <source src="MY_VIDEO.webm" type='video/webm'>-->
+              <p class="vjs-no-js">
+                To view this video please enable JavaScript, and consider upgrading to a web browser that
+                <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+              </p>
+            </video>
+            <div class="block-footer">
+              <button class="col button button-fill color-blue" onclick="completeTask()">Übung abschließen</button>
+            </div>
+          </div>
+          <div class="block block-strong">
+            <div align="center" class="block-header">Aufschauender Hund</div>
+            <video id="my-video" class="video-js" controls preload="auto" width="100%" height="100%"
+                   data-setup="{}">
+              <source src="resources/Übung_3.mp4" type='video/mp4'>
+              <!-- <source src="MY_VIDEO.webm" type='video/webm'>-->
+              <p class="vjs-no-js">
+                To view this video please enable JavaScript, and consider upgrading to a web browser that
+                <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+              </p>
+            </video>
+            <div class="block-footer">
+              <button class="col button button-fill color-blue" onclick="completeTask()">Übung abschließen</button>
+            </div>
+          </div>
+          <div class="block block-strong">
+            <div align="center" class="block-header">Unterer Rücken</div>
+            <video id="my-video" class="video-js" controls preload="auto" width="100%" height="100%"
+                   data-setup="{}">
+              <source src="resources/Übung_4.mp4" type='video/mp4'>
+              <!-- <source src="MY_VIDEO.webm" type='video/webm'>-->
+              <p class="vjs-no-js">
+                To view this video please enable JavaScript, and consider upgrading to a web browser that
+                <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+              </p>
+            </video>
+            <div class="block-footer">
+              <button class="col button button-fill color-blue" onclick="completeTask()">Übung abschließen</button>
+            </div>
+          </div>
+
+
+        </div>
       </div>
-      <div id="view-settings" class="view tab">
-        <!-- Catalog page will be loaded here dynamically from /catalog/ route -->
-      </div>
+    </div>
+
+    <!-- Catalog View -->
+    <div id="view-catalog" class="view tab">
+      <!-- Catalog page will be loaded here dynamically from /catalog/ route -->
+    </div>
+    <div id="view-settings" class="view tab">
+      <!-- Catalog page will be loaded here dynamically from /catalog/ route -->
+    </div>
 
   </div>
   <!-- Cordova -->
@@ -163,78 +164,82 @@
 
   <!-- Your custom app scripts -->
   <script src="js/app.js"></script>
-    <script>
-      function completeTask() {
-        var currentdate = new Date();
-        var datetime = currentdate.getHours() + ":" + currentdate.getMinutes();
-        var taskName = event.currentTarget.previousSibling.parentNode.parentNode.children[0].textContent;
-
-        for (var i = 0; i<4; i++){
-        if(app.data.list[i].title === taskName){
-          app.data.list[i].time = datetime;
-            $$("#test").append("<div class='timeline-item-time'>" + app.data.list[i].time + "</div>");
-            $$("#test").append("<div class='timeline-item-title'>" + app.data.list[i].title + "</div>");
-          }
-        }
-        $$(event.target).addClass("swipeout-decline")
-        }
-      function completeChallenge(e) {
-        var dynamicPopup = app.popup.create({
-          content: '<div class="popup">' +
-          '<div style="background:white">' +
-          '<div class="page" style="background-color: #275F8D; border-radius: 10px;">' +
-          '<img src="./resources/Paper-Plane-icon.png" width="150px" height="150px" style="display: block;\n' +
-          '    margin: 0 auto;\n' +
-          '    padding-top: 10px;' +
-          'margin-top:10%;">' +
-          '<p style="text-align: center; color:whitesmoke;padding-top:30px;font-size: 1.3rem;\n">Dein Feedback wurde erfolgreich übermittelt!</p>' +
-          '<button class="link popup-close button button-outline button-round" href="#" style="    color:black;\n' +
-          '    font-size: 20px;\n' +
-          '    background: white;\n' +
-          '    height: 10%;\n' +
-          '    width: 80%;\n' +
-          '    margin: 25px auto;\n' +
-          '    display: block;\n' +
-          'text-transform: none;' +
-          '    border-radius: 10px;\n' +
-          'border-width:3px;' +
-          '    border-color: #403e49;">Thanks</button>' +
-          '</div>' +
-          '</div>' +
-
-          '</div>',
-          // Events
-          on: {
-            open: function (popup) {
-              popup.el.style.borderRadius = "10px";
-              popup.el.style.height = "65%";
-              popup.el.style.width = "80%";
-              popup.el.style.top = "20%";
-              popup.el.style.bottom = "10%";
-              popup.el.style.left = "10%";
-              popup.el.style.right = "10%";
-            },
-            opened: function (popup) {
-              console.log("opened");
-              for (var i = 0; i < 29; i++) {
-                $$(".popup-backdrop").append('<span></span>');
-              }
-              $$(".popup-backdrop").addClass("fallingLeaves");
-            },
-          }
-        });
-        // Events also can be assigned on instance later
-        dynamicPopup.on('close', function (popup) {
-          console.log('Popup close');
-        });
-        dynamicPopup.on('closed', function (popup) {
-          console.log('Popup closed');
-        });
-
-        // Open dynamic popup
-        dynamicPopup.open();
-        $(e.target.closest('.swipeout')).addClass("swipeout-decline");
+  <script>
+    function completeTask() {
+      var currentdate = new Date();
+      var mins = currentdate.getMinutes();
+      if (mins < 10){
+        mins = "0" + mins;
       }
-    </script>
+      var datetime = currentdate.getHours() + ":" + mins;
+      var taskName = event.currentTarget.previousSibling.parentNode.parentNode.children[0].textContent;
+
+      for (var i = 0; i < 4; i++) {
+        if (app.data.list[i].title === taskName) {
+          app.data.list[i].time = datetime;
+          $$("#test").append("<div class='timeline-item-time'>" + app.data.list[i].time + "</div>");
+          $$("#test").append("<div class='timeline-item-title'>" + app.data.list[i].title + "</div>");
+        }
+      }
+      $$(event.target).addClass("swipeout-decline")
+    }
+
+    function completeChallenge(e) {
+      var dynamicPopup = app.popup.create({
+        content: '<div class="popup">' +
+        '<div style="background:white">' +
+        '<div class="page" style="background-color: #275F8D; border-radius: 10px;">' +
+        '<img src="./resources/Paper-Plane-icon.png" width="150px" height="150px" style="display: block;\n' +
+        '    margin: 0 auto;\n' +
+        'margin-top:20%;">' +
+        '<p style="text-align: center; color:whitesmoke;font-size: 1.3rem;\n">Dein Feedback wurde erfolgreich übermittelt!</p>' +
+        '<button class="link popup-close button button-outline button-round" href="#" style="    color:black;\n' +
+        '    font-size: 20px;\n' +
+        '    background: white;\n' +
+        '    height: 10%;\n' +
+        '    width: 80%;\n' +
+        '    margin: 0 auto;\n' +
+        '    display: block;\n' +
+        'text-transform: none;' +
+        '    border-radius: 10px;\n' +
+        'border-width:3px;' +
+        '    border-color: #403e49;">Danke</button>' +
+        '</div>' +
+        '</div>' +
+
+        '</div>',
+        // Events
+        on: {
+          open: function (popup) {
+            popup.el.style.borderRadius = "10px";
+            popup.el.style.height = "65%";
+            popup.el.style.width = "90%";
+            popup.el.style.top = "20%";
+            popup.el.style.bottom = "10%";
+            popup.el.style.left = "5%";
+            popup.el.style.right = "5%";
+          },
+          opened: function (popup) {
+            console.log("opened");
+            for (var i = 0; i < 29; i++) {
+              $$(".popup-backdrop").append('<span></span>');
+            }
+            $$(".popup-backdrop").addClass("fallingLeaves");
+          },
+        }
+      });
+      // Events also can be assigned on instance later
+      dynamicPopup.on('close', function (popup) {
+        console.log('Popup close');
+      });
+      dynamicPopup.on('closed', function (popup) {
+        console.log('Popup closed');
+      });
+
+      // Open dynamic popup
+      dynamicPopup.open();
+      $(e.target.closest('.swipeout')).addClass("swipeout-decline");
+    }
+  </script>
 </body>
 </html>
