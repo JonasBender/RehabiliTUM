@@ -105,3 +105,7 @@ background-color:#F2F2F2;
     -webkit-transform: translate(150px, 800px) rotateZ(360deg);
   }
 }
+.block-header{
+  font-size: large;
+  color:black !important;
+}
